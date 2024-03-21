@@ -17,26 +17,15 @@ def statGenerator():
         print("")
         print(f"4d6 roll is = {total}")
         print("")
+        if total < 10:  # Check if total is less than 10
+            total = 10  # Adjust to 10 if necessary
         statSelections.append(total)
         j += 1
 
-def viewStats():
+def viewRolledStats():
     i = 0
     while i < len(statSelections):
         print(statSelections[i])
         i += 1
     return
 
-def adjustStats():
-    for i in range(len(statSelections)):
-        if statSelections[i] < 10:
-            statSelections[i] = 10
-
-
-
-
-
-
-statGenerator()
-adjustStats()
-viewStats()
