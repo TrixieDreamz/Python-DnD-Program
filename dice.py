@@ -13,6 +13,7 @@ def diceRoller(numberOfDice, diceType, modifier):
         sum += result
         i += 1
     print(f"The sum is: {sum}")
+    print("")
     return sum
 
 def viewRecentDiceResults():
@@ -40,5 +41,9 @@ def rollDisadvantage():
     elif advantageDice1 == advantageDice2:
         return print(f"The lower roll was: {advantageDice1}")
     else: return print(f"The lower roll was: {advantageDice1}")
+
+def criticalFailureCheck(result):
+    if result == 1:
+        print("CRITICAL FAILURE!")
 
    
